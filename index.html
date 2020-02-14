@@ -49,15 +49,15 @@
     <form>
       <div class="form-group">
         <label for="exampleInputEmail1">Date</label>
-        <input type="number" class="form-control" id="date" aria-describedby="emailHelp">
+        <input type="number" class="form-control" id="date" min="1" max="31">
       </div>
       <div class="form-group">
         <label for="exampleInputPassword1">Month</label>
-        <input type="password" class="form-control" id="month">
+        <input type="number" class="form-control" id="month" min="1" max="12">
       </div>
       <div class="form-group">
         <label for="exampleInputPassword1">Year</label>
-        <input type="password" class="form-control" id="year">
+        <input type="number" class="form-control" id="year" min="1900">
       </div>
       <div class="form-group form-check">
         <p>Gender</p>

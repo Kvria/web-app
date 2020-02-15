@@ -33,3 +33,11 @@ function giveAkanName (){
     alert("You were born on a" ""+ dayOfTheWeek[dayBorn]. " + "Your Akan name is" + "akanName.");
   }
 }
+function getGender() {
+  var gender = (document.getElementByName("gender");
+  for  (i = 0; < gender.length ; i ++) {
+    if(gender[i].checked) {
+      return(gender[i].value)
+    }
+  }
+}

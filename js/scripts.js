@@ -1,43 +1,55 @@
-var maleNames={"Kwasi","Kwandwo","Kwabena","Kwaku","Yaw","Kofi","Kwame"}
-var femaleNames={"Akosua","Adwoa","Abenaa","Akua","Yaa","Afua","Ama"}
-var dayOfTheWeek={"Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"}
+var check;
+var check2;
+var CC;
+var YY;
+var month;
+var date;
+let submitDetails = document.getElementById('submit');
 
-function giveAkanName (){
-  var year =parseInt(document.getElementById("year").value)
-  var month=parseInt(document.getElementById("month").value)
-  var day=parseInt(document.getElementById("day").value)
-  var gender=getGender();
-  var date=new Date(year + "/" + month + "/" + day)
-  var dayBorn = date.getDay ();
-  var akanName;
-  var validate = (year > 0 && (month > 0 && month <= 12) && (day > 0 && day <= 31))
-  var validateGender = (gender |== "male" && gender |== "female")
-  if (year <= 0) {
-    alert("Kindly key in a valid year.");
+submitDetails.addEventListener('click', submitBirthday)
+function submitBirthday(e) {
+  e.preventDefault();
+  month = parseInt(document.getElementById("month").value);
+  date = parseInt(document.getElementById("date").value);
+  check = document.getElementById("Check").value;
+  check2=document.getElementById("Check2").value;
+
+  CC=parseInt(document.getElementById("year").value.slice(0,2))
+  YY=parseInt(document.getElementById("year").value.slice(2,4))
+
+  if ( month <= 0 || month > 12) {
+    alert("Key in valid month.");
+    return;
   }
-  else if (month <= 0 || month > 12) {
-    alert("Choose a month between 1 and 12.");
+  if ( date <= 0 || date > 31 ) {
+    alert("Key in valid date.");
+    return;
   }
-  else if (day <= 0 || day > 31) {
-    alert("Choose date between 1 and 31.");
+  if ( year = 0 || year > 2020) {
+    alert("Key in valid year.")
+    return;
   }
-  else if ( validate == false) {
-    alert("Key in the correct input.");
-  }
-  if (gender === "male" && year > 0 && month > 0 && <= 12 && day > 0 && day <= 31){
-    akanName = maleNames[dayBorn];
-    alert("You were born on a " ""+ dayOfTheWeek[dayBorn]. " + "Your Akan name is " + " akanName.");
-  }
-  else if (gender === "female" && year > 0 && month > 0 && <= 12 && day > 0 && day <= 31){
-    akanName = femaleNames[dayBorn];
-    alert("You were born on a" ""+ dayOfTheWeek[dayBorn]. " + "Your Akan name is" + "akanName.");
-  }
+  findAkanName();
 }
-function getGender() {
-  var gender = (document.getElementByName("gender");
-  for  (i = 0; < gender.length ; i ++) {
-    if(gender[i].checked) {
-      return(gender[i].value)
-    }
+function findAkanName (){
+  var dateweek = Math.floor( ( ( (CC/4) -2*CC-1) + ((5*YY/4) ) + ((26*( month +1)/10)) + date ) % 7);
+
+  var days = ["Sunday","Monday","Tuesday","Wednsesday","Thursday","Friday","Saturday"];
+  var male = ["Kwasi","Kwadwo","Kwabena","Kwaku","Yaw","Kofi","Kwame"];
+  var female = ["Akosua","Adwoa","Abenaa","Akua","Yaa","Afua","Ama"];
+
+  if (check2 === "female") {
+    alert("You are a female who was born on a " + days[dateweek] + ".Your Akan name is, "+ female[dateweek]);
+    return;
+
+
+  }
+  if ( check == "male") {
+    alert("You are a male who was born on a " + days[dateweek] + ".Your Akan name is, "+ male[dateweek]);
+    return;
+
+  }
+  else {
+    alert("Key in the correct data.");
   }
 }

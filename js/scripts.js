@@ -38,15 +38,16 @@ function findAkanName (){
   var male = ["Kwasi","Kwadwo","Kwabena","Kwaku","Yaw","Kofi","Kwame"];
   var female = ["Akosua","Adwoa","Abenaa","Akua","Yaa","Afua","Ama"];
 
-  if (check2 === "female") {
-    alert("You are a female who was born on a " + days[dateweek] + ".Your Akan name is, "+ female[dateweek]);
+  if (check2 == "female") {
+    alert("You are a female who was born on a " +days[dateweek] + ".Your Akan name is, "+female[dateweek]);
     return;
 
 
   }
   if ( check == "male") {
-    alert("You are a male who was born on a " + days[dateweek] + ".Your Akan name is, "+ male[dateweek]);
+    alert("You are a male who was born on a " +days[dateweek] + ".Your Akan name is, "+male[dateweek]);
     return;
+
 
   }
   else {

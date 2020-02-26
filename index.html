@@ -2,23 +2,23 @@
 <html>
   <head>
     <title>AKAN NAMES</title>
-    <link href="project.css/index.css" rel="stylesheet"type="text/css">
-  </head>
+    <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+    <link href="css/index.css" rel="stylesheet"type="text/css">
+    
+ </head>
   <body>
-    <div id="bow">
+    <div id="title">
       <h1>WHAT IS YOUR GHANIAN 'AKAN' NAME?</h1>
     </div>
       <h2>Do you know your Akan name?...</h2>
         <p>The Akan people in Ghana used to name their children according to  day of the week they were born and their gender.</p>
-        <p>A good example is of the first Ghanian president Kwame Nkurumah who's name clearly shows that he was born on a Saturday.</p
+        <p>A good example is of the first Ghanian president Kwame Nkurumah who's name clearly shows that he was born on a Saturday.</p>
         <p>Here are some of the names according to the gender;</p>
-    <div class= "jam">
+    <div class= "img">
       <img src ="images/akan culture.jpeg" alt= "an image of a man from the Akan community">
     </div>
-    <div class="apples">
-      Did you know that through this, one can discover<br> that the former UN secretary general, Kofi Anan, was born on a Friday?
-    </div>
-    <div class= "column">
+    <div class="row">
+      <div class= "column">
         <ul>
           <h3>Male names</h3>
             <li>Sunday   -Kwasi</li>
@@ -27,10 +27,10 @@
             <li>Wednesday-Kwaku</li>
             <li>Thursday -Kwo</li>
             <li>Friday   -Kofi</li>
-            <li>Saturday -Kwame</li
+            <li>Saturday -Kwame</li>
         </ul>
-    </div>
-    <div class= "column 2">
+      </div>
+      <div class= "column 2">
         <ul>
           <h3>Female names</h3>
             <li>Sunday   -Akosua</li>
@@ -41,26 +41,30 @@
             <li>Friday   -Afua</li>
             <li>Saturday -Ama</li>
           </ul>
-    </div>
-    <div class= "arrow">
+        </div>
+      </div>
+      <div class="float">
+        Did you know that through this, one can discover<br> that the former UN secretary general, Kofi Anan, was born on a Friday?
+      </div>
+    <div class= "description">
           <p> This web app will help one know the day of the week they were born after entering the date of the month and year they were born.</p>
           <p>To find out your Akan name, fill in the form below;</p>
       </div>
     <form>
       <div class="form-group">
-        <label for="exampleInputEmail1">Date</label>
+        <label for="exampleInputDate">Date</label>
         <input type="number" class="form-control" id="date" min="1">
       </div>
       <div class="form-group">
-        <label for="exampleInputPassword1">Month</label>
+        <label for="exampleInputMonth">Month</label>
         <input type="number" class="form-control" id="month" min="1">
 
       </div>
       <div class="form-group">
-        <label for="exampleInputPassword1">Year</label>
+        <label for="exampleInputYear">Year</label>
         <input type="number" class="form-control" id="year" >
       </div>
-      <div class="form-group form-check">
+      <!--<div class="form-group form-check">
         <p>Gender</p>
         <input type="checkbox" class="form-check-input" id="Check" value="male">
         <label class="form-check-label" for="exampleCheck1">Male</label>
@@ -68,13 +72,20 @@
       <div class="form-group form-check">
         <input type="checkbox" class="form-check-input" id="Check2" value="female">
         <label class="form-check-label" for="exampleCheck1">female</label>
+      </div>-->
+      <div class="form-group" >
+        <select name="gender" id="gender">
+          <option value="female">Female</option>
+          <option value="male">Male</option>
+        </select>
       </div>
-      <div class= "bb">
+
+      <div class= "submit">
         <input type="submit" id="submit" >
       </div>
-      </form>
-
-<script src=js/scripts.js></script>
+    </form>
+      <script src="js/jquery-3.4.1.js"></script>
+      <script src="js/scripts.js"></script>
 
   </body>
 <html>

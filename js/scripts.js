@@ -1,5 +1,6 @@
-var check;
-var check2;
+//var check;
+//var check2;
+var gender;
 var CC;
 var YY;
 var month;
@@ -11,8 +12,9 @@ function submitBirthday(e) {
   e.preventDefault();
   month = parseInt(document.getElementById("month").value);
   date = parseInt(document.getElementById("date").value);
-  check = document.getElementById("Check").value;
-  check2=document.getElementById("Check2").value;
+  //check = document.getElementById("Check").value;
+  //check2=document.getElementById("Check2").value;
+  gender=document.getElementById("gender").value;
 
   CC=parseInt(document.getElementById("year").value.slice(0,2))
   YY=parseInt(document.getElementById("year").value.slice(2,4))
@@ -37,19 +39,36 @@ function findAkanName (){
   var days = ["Sunday","Monday","Tuesday","Wednsesday","Thursday","Friday","Saturday"];
   var male = ["Kwasi","Kwadwo","Kwabena","Kwaku","Yaw","Kofi","Kwame"];
   var female = ["Akosua","Adwoa","Abenaa","Akua","Yaa","Afua","Ama"];
-
-  if (check2 == "female") {
-    alert("You are a female who was born on a " +days[dateweek] + ".Your Akan name is, "+female[dateweek]);
-    return;
-
-
-  }
-  if ( check == "male") {
+  /*if ( check.checked == true) {
     alert("You are a male who was born on a " +days[dateweek] + ".Your Akan name is, "+male[dateweek]);
     return;
 
 
   }
+  if (check2.checked == true) {
+    alert("You are a female who was born on a " +days[dateweek] + ".Your Akan name is, "+female[dateweek]);
+    return;
+
+
+  }*/
+  if(gender==="male"){
+    alert("You are a male who was born on a " +days[dateweek] + ".Your Akan name is, "+male[dateweek]);
+    return;
+    
+
+  }
+  else if(gender==="female"){
+    alert("You are a female who was born on a " +days[dateweek] + ".Your Akan name is, "+female[dateweek]);
+    return;
+    
+
+  }
+
+  
+
+
+
+    
   else {
     alert("Key in the correct data.");
   }

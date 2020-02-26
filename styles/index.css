@@ -1,0 +1,58 @@
+h1 {
+  text-align: center;
+  color: black;
+  font-style: oblique;
+}
+body {
+  background-color: black;
+}
+
+h2 {
+  color: white;
+  font-style: italic;
+}
+p {
+  color: white;
+  font-size: 15px;
+}
+#title{
+  border: 2px solid yellow;
+  padding: 6px;
+  margin: 25px;
+  background-color: yellow;
+}
+.float{
+  border: 2px solid yellow;
+  padding: 6px;
+  margin: 20px;
+  background-color: yellow;
+  float: right;
+  font-size: 15px;
+  font-style: italic;
+}
+li{
+    color: white;
+}
+h3{
+    color: white;
+}
+img{
+    float: right;
+}
+.form-group{
+    width: 40%;
+    display: grid;
+
+    
+}
+label{
+    color: white;
+}
+input{
+    margin-bottom: 50px;
+    height: 30px;
+}
+select{
+    margin-bottom: 50px;
+    height: 30px;
+}
